@@ -1,0 +1,40 @@
+commonfields:
+  id: 30bd64f4-6e2b-412e-8d6a-01f547821a97
+  version: 13
+vcShouldKeepItemLegacyProdMachine: false
+name: LoadLayoutsToContext
+type: python
+tags:
+- Utility
+comment: Loads certain layout details to the context
+enabled: true
+outputs:
+- contextPath: XSOAR.Layouts
+  description: Layout Objects
+  type: unknown
+- contextPath: XSOAR.Layouts.id
+  description: Id of the layout
+  type: string
+- contextPath: XSOAR.Layouts.name
+  description: Name of the layout
+  type: string
+- contextPath: XSOAR.Layouts.type
+  description: Type of the layout (In the API it is called 'Group')
+  type: string
+- contextPath: XSOAR.Layouts.tabs
+  description: Tabs of the layout
+  type: string
+- contextPath: XSOAR.Layouts.tabs.id
+  description: Tab id
+  type: string
+- contextPath: XSOAR.Layouts.name
+  description: Tab name
+  type: string
+scripttarget: 0
+subtype: python3
+pswd: ""
+runonce: false
+dockerimage: demisto/python3:3.10.8.37233
+runas: DBotWeakRole
+engineinfo: {}
+mainengineinfo: {}
