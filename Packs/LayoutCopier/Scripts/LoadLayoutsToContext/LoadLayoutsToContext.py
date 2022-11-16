@@ -1,7 +1,20 @@
+def extract_section(section):
+    if section:
+        return {
+            'name': section.get('name')
+        }
+
+
+def extract_sections(tab):
+    sections = tab.get('sections', [])
+    return list(map(extract_section, sections))
+
+
 def extract_tab(tab):
     return {
-        'id' : tab.get('id'),
-        'name': tab.get('name')
+        'id': tab.get('id'),
+        'name': tab.get('name'),
+        'section': extract_sections(tab)
     }
 
 
