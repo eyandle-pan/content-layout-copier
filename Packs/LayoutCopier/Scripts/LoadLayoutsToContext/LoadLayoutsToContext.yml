@@ -27,8 +27,14 @@ outputs:
 - contextPath: XSOAR.Layouts.tabs.id
   description: Tab id
   type: string
-- contextPath: XSOAR.Layouts.name
+- contextPath: XSOAR.Layouts.tabs.name
   description: Tab name
+  type: string
+- contextPath: XSOAR.Layouts.tabs.sections
+  description: Tab sections
+  type: string
+- contextPath: XSOAR.Layouts.tabs.sections.name
+  description: Section Names
   type: string
 scripttarget: 0
 subtype: python3
